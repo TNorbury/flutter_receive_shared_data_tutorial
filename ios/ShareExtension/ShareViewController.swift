@@ -10,16 +10,16 @@ import Social
 import MobileCoreServices
 
 class ShareViewController: SLComposeServiceViewController {
-
+    
     override func isContentValid() -> Bool {
         // Do validation of contentText and/or NSExtensionContext attachments here
         return true
     }
-
+    
     override func didSelectPost() {
         let sharedSuiteName: String = "group.com.tnorbury.flutterSharingTutorial"
         let sharedDataKey: String = "SharedData"
-   
+        
         let extensionItem = extensionContext?.inputItems[0] as! NSExtensionItem
         let contentTypeText = kUTTypeText as String
         
@@ -37,10 +37,10 @@ class ShareViewController: SLComposeServiceViewController {
         
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }
-
+    
     override func configurationItems() -> [Any]! {
         // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
         return []
     }
-
+    
 }
