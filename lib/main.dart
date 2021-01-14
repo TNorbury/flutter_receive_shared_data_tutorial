@@ -61,7 +61,10 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'The shared text that you received is:',
             ),
-            Text(_sharedText)
+            Text(
+              _sharedText,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )
           ],
         ),
       ),
