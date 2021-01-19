@@ -32,12 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // Create the share service
     ShareService()
-      // Register a callback so that we handle shared data if it arrives when the
+      // Register a callback so that we handle shared data if it arrives while the
       // app is running
       ..onDataReceived = _handleSharedData
 
       // Check to see if there is any shared data already, meaning that the app
-      // was launch via sharing.
+      // was launched via sharing.
       ..getSharedData().then(_handleSharedData);
   }
 
